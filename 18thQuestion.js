@@ -1,13 +1,31 @@
-// 17 Write a JavaScript program that iterates integers from 1 to 100. But for multiples of three print "Fizz" instead of the number and for multiples of five print "Buzz". For numbers multiples of both three and five print "FizzBuzz".Sample Output:
+// 17.Write a JavaScript program to find the Armstrong numbers of 3 digits
 
-for(let i=0 ;i<=100;i++){
-    if(i%3===0 && i%5===0){
-        console.log(i,"FizzBuzz");
-    }
-    else if(i%5===0){
-        console.log(i,"Buzz");
-    }
-    else if(i%3===0 ){
-        console.log(i,"Fizz");
-    }
+let number=153;
+let num=number
+// console.log(num);
+let count=0;
+while(num!=0){
+    
+    count=count+1
+    num=Math.floor(num/10)
+}
+
+num=number;
+let remain=0
+let result=0
+
+while(num!=0){
+    remain=num%10;
+  
+
+    result=result+Math.pow(remain,count)
+
+    num=Math.floor(num/10);
+}
+
+if(result===number){
+    console.log(`${number} is an armstrong number`);
+}
+else{
+    console.log(`${number} is not an armstrong number`);
 }

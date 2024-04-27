@@ -1,31 +1,13 @@
-// 17.Write a JavaScript program to find the Armstrong numbers of 3 digits
+// 19.Write a JavaScript program to sort the items of an array.
+// Sample array : var arr1 = [ -3, 8, 7, 6, 5, -4, 3, 2, 1 ];
+// Sample Output : -4,-3,1,2,3,5,6,7,8
 
-let number=153;
-let num=number
-// console.log(num);
-let count=0;
-while(num!=0){
-    
-    count=count+1
-    num=Math.floor(num/10)
-}
 
-num=number;
-let remain=0
-let result=0
 
-while(num!=0){
-    remain=num%10;
-  
+let arr1=[ -3, 8, 7, 6, 5, -4, 3, 2, 1 ];
 
-    result=result+Math.pow(remain,count)
+arr1.sort((a,b)=>{
+    return a-b
+})
 
-    num=Math.floor(num/10);
-}
-
-if(result===number){
-    console.log(`${number} is an armstrong number`);
-}
-else{
-    console.log(`${number} is not an armstrong number`);
-}
+console.log(arr1);
